@@ -20,17 +20,17 @@
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
 
         <!-- home-screen-starts -->
-        <section class="home min-h-screen text-white flex border justify-center items-center hidden">
+        <section id="home-screen" class="min-h-screen text-white flex border justify-center items-center">
             <div class="flex flex-col items-center gap-10">
                 <h1 class="text-8xl font-anton uppercase">Alpha Clash Pro</h1>
                 <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button class="btn bg-white text-black">Play Now!</button>
+                <button onclick="play()" class="btn bg-white text-black">Play Now!</button>
             </div>
         </section>
         <!-- home-screen-ends -->
 
         <!-- playground start -->
-        <section class="play-ground">
+        <section id="play-ground" class="hidden">
             <div class="flex flex-col items-center gap-20 pt-20">
                 <!-- playground screen starts -->
                 <div class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3]">
@@ -102,12 +102,23 @@
         </section>
         <!-- playground end -->
 
-        <!-- score starts -->
-        <section class="score"></section>
-        <!-- score ends -->
+        <!-- final score starts -->
+        <section class="min-h-screen score flex justify-center items-center hidden">
+            <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-lg">
+                <h1 class="text-6xl p-4">
+                    <span class="font-extrabold text-white">Score:</span> 
+                    <span class="text-white">14</span>
+                </h1>
+                <button class="btn bg-white text-xl text-black hover:text-white">Play Again</button>
+                <p class="text-white">Practice will make you Pro</p>
+            </div>
+        </section>
+        <!-- final score ends -->
 
     </main>
     <!-- main ends -->
+    <script src="scripts/utility.js"></script>
+    <script src="scripts/alpha-clash-pro.js"></script>
 </body>
 
 </html>
