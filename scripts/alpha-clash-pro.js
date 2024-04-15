@@ -13,7 +13,21 @@
 
 // }
 
+function continueGame(){
+    // step-1: generate a random alphabet
+    const alphabet = getARandomAlphabet();
+    console.log('Your Random Alphabet is:', alphabet);
+
+    // set(show it), randomly generated alphabet to the screen.
+    const currentAlphabetElement =  document.getElementById('current-alphabet');
+    currentAlphabetElement.innerText = alphabet;
+
+    // set Background color 
+    setBackgroundColorById(alphabet);
+}
+
 function play(){
     hideElementById('home-screen');
     showElementById('play-ground');
+    continueGame();
 }
